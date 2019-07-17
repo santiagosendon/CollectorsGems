@@ -48,9 +48,7 @@ createImageButton.addEventListener("click", toggleImageInput)
 
 loginSetup = () => {
   fetch(baseUrl + "/users")
-    .then(response => response.json())
-    .then(data => {
-      state.users = data
+    .then(response => response.json())      state.users = data
       loginForm.addEventListener("submit", logUserIn)
   })
 }
